@@ -1,7 +1,7 @@
 var mongoose = require ("mongoose");
 
 module.exports = function(config) {
-    mongoose.connect(config.db);
+    mongoose.connect(config.db, {useNewUrlParser: true});
     console.log("connecting to -> " + config.db);
 
     var db = mongoose.connection;
